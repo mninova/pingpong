@@ -32,9 +32,9 @@ while (<FILE>) {
     my $seq=$tmp[9];
     my $start=$tmp[3];
     my $end=$start+length($seq);
-    if ($strand==0) {if ((length($seq)>=23) and (length($seq)<33)) {$positive{"$chrom\t$start\t$end\t$seq"}+=1}}
+    if ($strand==0) {if ((length($seq)>24) and (length($seq)<33)) {$positive{"$chrom\t$start\t$end\t$seq"}+=1}}
 
-    elsif ($strand==16) {if ((length($seq)>=23) and (length($seq)<33)) {$negative{"$chrom\t$start\t$end\t$seq"}+=1}}
+    elsif ($strand==16) {if ((length($seq)>24) and (length($seq)<33)) {$negative{"$chrom\t$start\t$end\t$seq"}+=1}}
 
 }
 
